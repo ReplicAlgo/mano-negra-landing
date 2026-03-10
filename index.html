@@ -1,1573 +1,636 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicador Mano Negra | Trading Sistemático</title>
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00ff88, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-dark {
+            background: #161616;
+            border: 1px solid #262626;
+            transition: all 0.3s ease;
+        }
+        .card-dark:hover {
+            border-color: #00ff88;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.05);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00ff88, #00b361);
+            color: #000;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #333;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-logo {
+            max-width: 180px;
+            margin: 0 auto 2rem auto;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.2));
+        }
+        .feature-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #262626;
+        }
+        .risk-chart-comparison {
+            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-radius: 1.5rem;
+            border: 1px solid #333;
+            padding: 2.5rem;
+        }
+        .risk-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .cta-box {
+            background: #0d0d0d;
+            border: 1px solid #00ff88;
+            border-radius: 24px;
+            padding: 2.5rem;
+        }
+        .circle-img-container {
+            border: 2px solid #00ff88;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            aspect-ratio: 1 / 1;
+        }
+    </style>
 </head>
-
-<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
-
-<div class=WordSection1>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;!DOCTYPE html&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;html lang=&quot;es&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;head&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;meta
-charset=&quot;UTF-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;meta
-name=&quot;viewport&quot; content=&quot;width=device-width,
-initial-scale=1.0&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;title&gt;Indicador Mano
-Negra | Trading Sistemático&lt;/title&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;script
-src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;link
-rel=&quot;stylesheet&quot;
-href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;style&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; body {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background-color: #0a0a0a;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-color: #e5e5e5;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-font-family: 'Inter', sans-serif;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-scroll-behavior: smooth;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .gradient-text {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background: linear-gradient(90deg, #00ff88, #00ccff);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
--webkit-background-clip: text;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
--webkit-text-fill-color: transparent;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .card-dark {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background: #161616;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 1px solid #262626;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-transition: all 0.3s ease;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp;
-.card-dark:hover {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-color: #00ff88;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-transform: translateY(-5px);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-box-shadow: 0 10px 30px rgba(0, 255, 136, 0.05);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .btn-primary {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background: linear-gradient(90deg, #00ff88, #00b361);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-color: #000;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-font-weight: bold;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-transition: all 0.2s ease;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp;
-.btn-primary:hover {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-transform: scale(1.05);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; /* Contenedor de
-YouTube Responsivo */</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp;
-.video-container {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-position: relative;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-padding-bottom: 56.25%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-height: 0;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-overflow: hidden;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-radius: 12px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 1px solid #333;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background: #000;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp;
-.video-container iframe {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-position: absolute;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-top: 0;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-left: 0;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-width: 100%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-height: 100%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .hero-logo {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-max-width: 180px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-margin: 0 auto 2rem auto;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.2));</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .feature-img {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-width: 100%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-height: 180px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-object-fit: cover;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-radius: 12px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-margin-bottom: 1.5rem;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 1px solid #262626;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp;
-.risk-chart-comparison {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-radius: 1.5rem;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 1px solid #333;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-padding: 2.5rem;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .risk-image {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-width: 100%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-height: auto;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-radius: 12px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 1px solid rgba(255,255,255,0.1);</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; .cta-box {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-background: #0d0d0d;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 1px solid #00ff88;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-radius: 24px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-padding: 2.5rem;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp;
-.circle-img-container {</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border: 2px solid #00ff88;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-border-radius: 50%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-overflow: hidden;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-width: 100%;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-max-width: 450px;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-aspect-ratio: 1 / 1;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/style&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;/head&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;body&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Navegación --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;nav class=&quot;sticky
-top-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;flex items-center justify-between p-6 max-w-7xl mx-auto&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;text-xl font-black tracking-tighter uppercase
-text-white&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;span class=&quot;text-gray-400&quot;&gt;Indicador&lt;/span&gt;
-MANO&lt;span class=&quot;text-[#00ff88]&quot;&gt;NEGRA&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;hidden md:flex space-x-8 text-xs uppercase tracking-widest
-font-bold&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;a href=&quot;#resultados&quot; class=&quot;hover:text-[#00ff88]
-transition text-gray-300&quot;&gt;Resultados&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;a href=&quot;#funciones&quot; class=&quot;hover:text-[#00ff88]
-transition text-gray-300&quot;&gt;Tecnología&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;a href=&quot;#precios&quot; class=&quot;hover:text-[#00ff88]
-transition text-gray-300&quot;&gt;Precios&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;a href=&quot;#faq&quot; class=&quot;hover:text-[#00ff88]
-transition text-gray-300&quot;&gt;FAQ&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;a href=&quot;#final-cta&quot; class=&quot;text-xs bg-white text-black px-5
-py-2.5 rounded-full font-black hover:bg-[#00ff88] transition
-uppercase&quot;&gt;Contacto&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/nav&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Hero --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section class=&quot;max-w-7xl
-mx-auto px-6 py-20 text-center&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;img
-src=&quot;Logo Mano Negra.png&quot; alt=&quot;Logo Mano Negra&quot;
-class=&quot;hero-logo&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h1
-class=&quot;text-4xl md:text-6xl font-black mb-8 leading-[1.1]
-tracking-tight&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-POTENCIA TU TRADING CON &lt;br&gt; &lt;span class=&quot;gradient-text&quot;&gt;ESTRATEGIA
-Y TECNOLOGÍA&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/h1&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-12
-font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-Tu compañero de viaje en TradingView. Gestión de riesgo automática, alertas
-multicanal y backtesting real diseñado para los mercados más líquidos.</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Video
-Container con YouTube --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-4xl mx-auto mb-16 px-2&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;video-container shadow-2xl
-shadow-[#00ff8811]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;iframe </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp;
-src=&quot;https://www.youtube.com/embed/HMozZOAs8bA?rel=0&amp;amp;modestbranding=1&quot;
-</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; title=&quot;Indicador Mano Negra - El Trader Roto&quot;
-</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp;
-allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-web-share&quot; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; allowfullscreen&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/iframe&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;flex flex-col md:flex-row justify-center gap-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;a href=&quot;#precios&quot; class=&quot;btn-primary px-10 py-5 rounded-xl
-text-lg uppercase tracking-tighter&quot;&gt;Ver Planes de Lanzamiento&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;a href=&quot;#resultados&quot; class=&quot;border border-gray-700
-hover:border-[#00ff88] px-10 py-5 rounded-xl text-lg transition uppercase
-tracking-tighter font-bold&quot;&gt;Ver Resultados Backtest&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Resultados Backtest
---&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section
-id=&quot;resultados&quot; class=&quot;bg-[#0f0f0f] py-32 border-y
-border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;text-center mb-16&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;h2 class=&quot;text-3xl md:text-5xl font-black mb-6
-uppercase&quot;&gt;Pruebas &lt;span
-class=&quot;text-[#00ff88]&quot;&gt;Cuantitativas&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;p class=&quot;text-gray-400 max-w-2xl mx-auto uppercase
-text-xs tracking-widest font-bold&quot;&gt;Rendimiento Histórico Detallado&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;mb-12&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-8 md:p-12 rounded-[2rem]
-overflow-hidden border-[#00ff8822]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;flex flex-col lg:flex-row gap-12
-items-start&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;lg:w-2/5
-w-full&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;flex items-center gap-3 mb-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span
-class=&quot;bg-[#00ff8822] text-[#00ff88] text-[10px] font-black px-4 py-1.5
-rounded-full border border-[#00ff8844] uppercase tracking-wider&quot;&gt;Activo
-Principal&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3
-class=&quot;text-3xl font-black text-white tracking-tighter uppercase&quot;&gt;S&amp;amp;P
-500 &lt;span class=&quot;text-gray-500&quot;&gt;(ES)&lt;/span&gt;&lt;/h3&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;space-y-8 mb-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;grid grid-cols-2 gap-4 border-b border-white/5 pb-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500 text-[10px] uppercase
-font-black mb-1 tracking-widest&quot;&gt;Retorno Estrategia&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-[#00ff88] text-5xl
-font-black&quot;&gt;+582%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;div class=&quot;text-right&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500 text-[10px] uppercase
-font-black mb-1 tracking-widest&quot;&gt;Max Drawdown&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-white text-3xl
-font-black&quot;&gt;-14.2%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;flex flex-col gap-4&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;div class=&quot;flex justify-between items-center text-sm border-b
-border-white/5 pb-4&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-gray-400 uppercase font-bold
-tracking-tighter&quot;&gt;Profit Factor&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-white font-black
-text-xl&quot;&gt;2.41&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;div class=&quot;flex justify-between items-center text-sm&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-gray-400 uppercase font-bold
-tracking-tighter&quot;&gt;Win Rate&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-white font-black
-text-xl&quot;&gt;64.8%&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;lg:w-3/5
-w-full&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img
-src=&quot;Bactest S&amp;P500.png&quot; alt=&quot;Equity Curve S&amp;P500&quot;
-class=&quot;w-full rounded-2xl border border-white/5 shadow-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;!-- Otros Activos --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;grid md:grid-cols-3 gap-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-6 rounded-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Nasdaq result.png&quot;
-alt=&quot;Nasdaq Result&quot; class=&quot;feature-img&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;text-white font-black mb-2
-uppercase&quot;&gt;NASDAQ 100&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-[#00ff88] font-black
-text-2xl&quot;&gt;+491%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500 text-xs uppercase
-font-bold mt-1&quot;&gt;Drawdown: 16.5%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-6 rounded-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;DAX Result.png&quot;
-alt=&quot;DAX Result&quot; class=&quot;feature-img&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;text-white font-black mb-2
-uppercase&quot;&gt;DAX 40&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-[#00ff88] font-black
-text-2xl&quot;&gt;+325%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500 text-xs uppercase
-font-bold mt-1&quot;&gt;Drawdown: 12.8%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-6 rounded-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Dow Jones Result.png&quot;
-alt=&quot;Dow Jones Result&quot; class=&quot;feature-img&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;text-white font-black mb-2
-uppercase&quot;&gt;DOW JONES 30&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-[#00ff88] font-black
-text-2xl&quot;&gt;+288%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500 text-xs uppercase
-font-bold mt-1&quot;&gt;Drawdown: 11.2%&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Tecnología/Funciones
---&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section
-id=&quot;funciones&quot; class=&quot;py-32 bg-black&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;mb-20 text-center&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;h2 class=&quot;text-3xl md:text-5xl font-black mb-4
-uppercase&quot;&gt;Tecnología de &lt;span
-class=&quot;text-[#00ff88]&quot;&gt;Vanguardia&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;p class=&quot;text-gray-400 uppercase text-xs tracking-widest
-font-bold&quot;&gt;Un set completo de herramientas profesionales&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-8 rounded-[2rem]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Smart Box.png&quot; alt=&quot;Mano
-Negra Smart Box&quot; class=&quot;feature-img h-48&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class=&quot;text-xl font-black text-white
-mb-4 uppercase&quot;&gt;Smart Execution Box&lt;/h3&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-sm
-leading-relaxed&quot;&gt;Detección automática de zonas de alta probabilidad. No
-persigas el precio, deja que el indicador identifique el contexto óptimo.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-8 rounded-[2rem]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Riesgo.png&quot; alt=&quot;Gestión de
-Riesgo&quot; class=&quot;feature-img h-48&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class=&quot;text-xl font-black text-white
-mb-4 uppercase&quot;&gt;Risk Engine 2.0&lt;/h3&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-sm
-leading-relaxed&quot;&gt;Cálculo en tiempo real de lotaje basado en tu capital. El
-indicador calcula automáticamente el tamaño de posición para cada trade.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-8 rounded-[2rem]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Alertas.png&quot; alt=&quot;Alertas
-Inteligentes&quot; class=&quot;feature-img h-48&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class=&quot;text-xl font-black text-white
-mb-4 uppercase&quot;&gt;Ecosistema de Alertas&lt;/h3&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-sm
-leading-relaxed&quot;&gt;Recibe notificaciones críticas en Telegram, App de
-TradingView o Correo. Diseñado para que no te pierdas una sola señal.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Gestión de Riesgo
-Detallada --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section
-class=&quot;py-32 bg-[#0f0f0f] border-t border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;flex flex-col lg:flex-row items-center gap-16&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;lg:w-1/2&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;text-[#00ff88] text-xs
-font-black mb-4 uppercase tracking-[0.3em]&quot;&gt;La Clave del Éxito&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;text-4xl md:text-5xl font-black
-text-white mb-8 leading-tight uppercase&quot;&gt;DOMINA TU &lt;span
-class=&quot;text-[#00ff88]&quot;&gt;RIESGO&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;space-y-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;flex gap-4&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;bg-white/5 p-4 rounded-xl h-fit border border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-calculator text-[#00ff88] text-xl&quot;&gt;&lt;/i&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h4
-class=&quot;text-white font-black uppercase mb-1&quot;&gt;Cálculo de Gestión de
-Riesgo&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-gray-400 text-sm&quot;&gt;Integrado directamente en el gráfico para
-que sepas exactamente cuánto arriesgas antes de entrar.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img
-src=&quot;Calculo de Gestion de Riesgo.png&quot; alt=&quot;Panel de Gestión de
-Riesgo&quot; class=&quot;mt-4 rounded-lg border border-white/10 w-full
-max-w-sm&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;flex gap-4&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;bg-white/5 p-4 rounded-xl h-fit border border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-chart-line text-[#00ff88] text-xl&quot;&gt;&lt;/i&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h4
-class=&quot;text-white font-black uppercase mb-1&quot;&gt;Optimización
-Matemática&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-gray-400 text-sm&quot;&gt;Compara cómo crece tu capital bajo
-diferentes modelos de gestión.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;lg:w-1/2 w-full&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;risk-chart-comparison&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;grid grid-cols-2
-gap-4 mb-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;text-center&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-[10px] text-gray-500 font-bold uppercase mb-2&quot;&gt;Modelo A&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;bg-white/5 p-2 rounded-lg border border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;span class=&quot;text-xs font-bold text-gray-400&quot;&gt;Tamaño
-Fijo&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;text-center&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-[10px] text-green-500 font-bold uppercase mb-2&quot;&gt;Modelo B
-(Recomendado)&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;bg-green-500/10 p-2 rounded-lg border border-green-500/20&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &lt;span class=&quot;text-xs font-bold text-green-500&quot;&gt;Fracción
-Fija&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;space-y-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-[10px] text-gray-400 uppercase font-black mb-3&quot;&gt;Escenario A:
-Crecimiento Lineal&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img
-src=&quot;Escenario A Tamano Fijo.png&quot; alt=&quot;Escenario A Tamaño
-Fijo&quot; class=&quot;risk-image grayscale&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-[10px] text-[#00ff88] uppercase font-black mb-3&quot;&gt;Escenario B:
-Crecimiento Exponencial&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img
-src=&quot;Escenario B Fraccion Fija.png&quot; alt=&quot;Escenario B Fracción
-Fija&quot; class=&quot;risk-image border-[#00ff8822]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- App de Portafolio
---&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section
-class=&quot;py-32 bg-black border-y border-white/5 overflow-hidden&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;flex flex-col lg:flex-row items-center gap-20&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;lg:w-1/2 relative&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;circle-img-container
-shadow-[0_0_50px_rgba(0,255,136,0.1)]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Picture
-circulo.png&quot; alt=&quot;Trading Dashboard&quot; class=&quot;w-full h-full
-object-cover&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;lg:w-1/2&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;bg-[#00ff88] text-black
-text-[10px] font-black px-4 py-1.5 rounded-full inline-block mb-6 uppercase
-tracking-widest&quot;&gt;Exclusivo Elite&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;text-4xl md:text-5xl font-black
-text-white mb-8 leading-tight uppercase&quot;&gt;SIMULADOR DE &lt;br&gt;&lt;span
-class=&quot;gradient-text&quot;&gt;PORTAFOLIO AVANZADO&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-lg mb-10
-leading-relaxed&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No operes a ciegas. Como miembro
-Elite, obtienes acceso a nuestra aplicación exclusiva de simulación donde
-puedes proyectar resultados de múltiples estrategias combinadas.</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;Simulacion Portafolio
-App.png&quot; alt=&quot;Simulación Portafolio App&quot; class=&quot;rounded-2xl
-border border-white/10 shadow-2xl mb-10 w-full&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;grid grid-cols-2 gap-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;border-l-2
-border-[#00ff88] pl-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-white font-black text-2xl&quot;&gt;Smart DCA&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-gray-500 text-xs uppercase font-bold tracking-widest&quot;&gt;Algoritmo
-de Entrada&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;border-l-2
-border-[#00ff88] pl-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-white font-black text-2xl&quot;&gt;Monte Carlo&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p
-class=&quot;text-gray-500 text-xs uppercase font-bold tracking-widest&quot;&gt;Análisis
-de Robustez&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Precios --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section id=&quot;precios&quot;
-class=&quot;py-32 bg-[#0a0a0a]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;text-center mb-20&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;h2 class=&quot;text-3xl md:text-5xl font-black mb-6
-uppercase&quot;&gt;Planes de &lt;span
-class=&quot;text-[#00ff88]&quot;&gt;Lanzamiento&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;p class=&quot;text-gray-400 uppercase text-xs tracking-widest
-font-bold&quot;&gt;Oferta por tiempo limitado&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;grid md:grid-cols-2 gap-10 max-w-5xl mx-auto&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;!-- Standard --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-10 rounded-[2.5rem] relative flex
-flex-col&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mb-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class=&quot;text-2xl
-font-black text-white mb-2 uppercase&quot;&gt;STANDARD&lt;/h3&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500
-text-xs uppercase font-bold tracking-widest&quot;&gt;Para traders en
-crecimiento&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mb-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-5xl
-font-black text-white&quot;&gt;$49&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-gray-500
-font-bold uppercase text-xs&quot;&gt;/ Mes&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;space-y-5 mb-12
-flex-grow&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Indicador Mano Negra V2</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Panel de Gestión de
-Riesgo</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Alertas en TradingView</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Acceso a Grupo VIP
-Telegram</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a
-href=&quot;https://pay.hotmart.com/YOUR_LINK_HERE&quot; class=&quot;w-full py-5
-rounded-2xl border border-gray-700 text-center font-black uppercase text-xs
-tracking-widest hover:border-[#00ff88] hover:text-[#00ff88]
-transition&quot;&gt;Suscribirse Ahora&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;!-- Elite --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-10 rounded-[2.5rem]
-border-[#00ff88] relative flex flex-col scale-105 shadow-[0_20px_50px_rgba(0,255,136,0.1)]&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;absolute -top-5 left-1/2
--translate-x-1/2 bg-[#00ff88] text-black px-6 py-2 rounded-full text-[10px]
-font-black uppercase tracking-[0.2em]&quot;&gt;Más Popular&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mb-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class=&quot;text-2xl
-font-black text-white mb-2 uppercase&quot;&gt;ELITE&lt;/h3&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-500
-text-xs uppercase font-bold tracking-widest&quot;&gt;Para profesionales&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mb-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;text-gray-500
-line-through text-lg font-bold mb-1&quot;&gt;$200&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-6xl
-font-black text-[#00ff88]&quot;&gt;$129&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;text-gray-500
-font-bold uppercase text-xs&quot;&gt;/ Mes&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;text-[#00ff88]
-text-[10px] font-black uppercase mt-2&quot;&gt;Ahorras $71 cada mes&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;space-y-5 mb-12
-flex-grow&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-white font-black&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-star text-[#00ff88]&quot;&gt;&lt;/i&gt; Todo lo del Plan
-Standard</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; App de Simulación de
-Portafolio</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Soporte Prioritario
-1-on-1</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Masterclass de
-Estrategia</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-center
-gap-3 text-sm text-gray-300 font-medium&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i
-class=&quot;fas fa-check text-[#00ff88]&quot;&gt;&lt;/i&gt; Webhooks para
-Automatización</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a
-href=&quot;https://pay.hotmart.com/YOUR_LINK_HERE&quot; class=&quot;btn-primary
-w-full py-5 rounded-2xl text-center font-black uppercase text-xs
-tracking-widest shadow-xl&quot;&gt;Obtener Acceso Elite&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- FAQ --&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;section id=&quot;faq&quot;
-class=&quot;py-32 bg-[#0f0f0f] border-t border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-3xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;text-center mb-16&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;h2 class=&quot;text-3xl font-black text-white
-uppercase&quot;&gt;Preguntas &lt;span
-class=&quot;text-[#00ff88]&quot;&gt;Frecuentes&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;space-y-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-6 rounded-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;text-white font-black mb-2
-uppercase text-sm&quot;&gt;¿Necesito cuenta de pago en
-TradingView?&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-sm&quot;&gt;No, el
-indicador funciona perfectamente en cuentas gratuitas. Sin embargo, para
-alertas múltiples se recomienda un plan básico de TradingView.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-6 rounded-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;text-white font-black mb-2
-uppercase text-sm&quot;&gt;¿En qué mercados funciona mejor?&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-sm&quot;&gt;Ha sido
-optimizado para índices (S&amp;amp;P500, Nasdaq, DAX), Commodities (Oro,
-Petróleo) y pares mayores de Forex.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;card-dark p-6 rounded-2xl&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;text-white font-black mb-2
-uppercase text-sm&quot;&gt;¿Es un bot de trading automático?&lt;/h4&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-gray-400 text-sm&quot;&gt;Es un
-indicador de asistencia y estrategia. Proporciona señales y gestión, pero tú
-ejecutas los trades (o usas webhooks en el plan Elite para
-automatizar).&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/section&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;!-- Footer / Final CTA
---&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;footer id=&quot;final-cta&quot;
-class=&quot;py-20 bg-black border-t border-white/5&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
-class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;cta-box text-center mb-20&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;h2 class=&quot;text-3xl md:text-5xl font-black text-white
-mb-8 uppercase&quot;&gt;¿Listo para operar con &lt;br&gt;&lt;span
-class=&quot;text-[#00ff88]&quot;&gt;ventaja
-estadística?&lt;/span&gt;&lt;/h2&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;flex flex-col md:flex-row justify-center
-gap-6&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;https://wa.me/YOUR_NUMBER&quot;
-class=&quot;bg-[#25D366] text-black px-8 py-4 rounded-xl font-black uppercase
-text-sm flex items-center justify-center gap-3 hover:scale-105
-transition&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;fab
-fa-whatsapp text-xl&quot;&gt;&lt;/i&gt; Hablar con un Asesor</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;mailto:contacto@alfontrading.com&quot;
-class=&quot;bg-white/10 text-white px-8 py-4 rounded-xl font-black uppercase
-text-sm flex items-center justify-center gap-3 hover:bg-white/20
-transition&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;fas
-fa-envelope text-xl&quot;&gt;&lt;/i&gt; Enviar Correo</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;flex flex-col md:flex-row justify-between items-center
-gap-10&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;text-xl font-black uppercase
-text-white&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; MANO&lt;span
-class=&quot;text-[#00ff88]&quot;&gt;NEGRA&lt;/span&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;div class=&quot;flex gap-8&quot;&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot; class=&quot;text-gray-500
-hover:text-[#00ff88] transition&quot;&gt;&lt;i class=&quot;fab fa-youtube
-text-2xl&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot; class=&quot;text-gray-500
-hover:text-[#00ff88] transition&quot;&gt;&lt;i class=&quot;fab fa-instagram
-text-2xl&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot; class=&quot;text-gray-500
-hover:text-[#00ff88] transition&quot;&gt;&lt;i class=&quot;fab fa-telegram
-text-2xl&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;div class=&quot;border-t border-white/5 pt-8 normal-case text-gray-500
-leading-relaxed text-justify px-4&quot;&gt;</span></p>
-
-<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
-lang=ES-CO>&lt;p&gt;&lt;strong&gt;Invertir en mercados financieros conlleva
-riesgos significativos.&lt;/strong&gt; No ponga en juego capital que no pueda
-permitirse perder. &lt;strong&gt;Educación, no Asesoría:&lt;/strong&gt; Este
-manual y el indicador son herramientas 100% informativas. No constituyen
-asesoramiento financiero ni recomendaciones de inversión. &lt;strong&gt;Responsabilidad
-Individual:&lt;/strong&gt; Usted es el único responsable de sus decisiones de
-trading. El rendimiento pasado de una estrategia no garantiza resultados
-futuros. &lt;strong&gt;Riesgo de Pérdida:&lt;/strong&gt; El uso de
-apalancamiento y productos CFD puede amplificar tanto las ganancias como las
-pérdidas de capital. Este indicador no garantiza rentabilidad ni elimina el
-riesgo de pérdida.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &lt;p class=&quot;text-center mt-6 text-[10px] uppercase
-tracking-widest font-bold&quot;&gt;© 2026 AlfonTrading - Todos los derechos
-reservados.&lt;/p&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&nbsp; &nbsp; &lt;/footer&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;/body&gt;</span></p>
-
-<p class=MsoNormal><span lang=ES-CO>&lt;/html&gt;</span></p>
-
-</div>
-
+<body>
+ 
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center justify-between p-6 max-w-7xl mx-auto">
+            <div class="text-xl font-black tracking-tighter uppercase text-white">
+                <span class="text-gray-400">Indicador</span> MANO<span class="text-[#00ff88]">NEGRA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-bold">
+                <a href="#resultados" class="hover:text-[#00ff88] transition text-gray-300">Resultados</a>
+                <a href="#funciones" class="hover:text-[#00ff88] transition text-gray-300">Tecnología</a>
+                <a href="#precios" class="hover:text-[#00ff88] transition text-gray-300">Precios</a>
+                <a href="#faq" class="hover:text-[#00ff88] transition text-gray-300">FAQ</a>
+            </div>
+            <a href="#final-cta" class="text-xs bg-white text-black px-5 py-2.5 rounded-full font-black hover:bg-[#00ff88] transition uppercase">Contacto</a>
+        </div>
+    </nav>
+ 
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <img src=" Logo Mano Negra.png " alt="Logo Mano Negra" class="hero-logo">
+ 
+ 
+    <h1 class="text-4xl md:text-6xl font-black mb-8 leading-[1.1] tracking-tight">
+            POTENCIA TU TRADING CON <br> <span class="gradient-text">ESTRATEGIA Y TECNOLOGÍA</span>
+ 
+ 
+    </h1>
+        <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-12 font-medium">
+            Tu compañero de viaje en TradingView. Gestión de riesgo automática, alertas multicanal y backtesting real diseñado para los mercados más líquidos.
+ 
+ 
+    </p>
+ 
+        <!-- Video Container con YouTube -->
+        <div class="max-w-4xl mx-auto mb-16 px-2">
+            <div class="video-container shadow-2xl shadow-[#00ff8811]">
+                <iframe
+    src="https://www.youtube.com/embed/HMozZOAs8bA?rel=0&modestbranding=1"
+    title="Indicador Mano Negra - El Trader Roto" 
+ 
+ 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+ 
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <a href="#precios" class="btn-primary px-10 py-5 rounded-xl text-lg uppercase tracking-tighter">Ver Planes de Lanzamiento</a>
+            <a href="#resultados" class="border border-gray-700 hover:border-[#00ff88] px-10 py-5 rounded-xl text-lg transition uppercase tracking-tighter font-bold">Ver Resultados Backtest</a>
+        </div>
+    </section>
+ 
+    <!-- Resultados Backtest -->
+    <section id="resultados" class="bg-[#0f0f0f] py-32 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase">Pruebas <span class="text-[#00ff88]">Cuantitativas</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto uppercase text-xs tracking-widest font-bold">Rendimiento Histórico Detallado</p>
+            </div>
+            
+            <div class="mb-12">
+                <div class="card-dark p-8 md:p-12 rounded-[2rem] overflow-hidden border-[#00ff8822]">
+    <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <div class="lg:w-2/5 w-full">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="bg-[#00ff8822] text-[#00ff88] text-[10px] font-black px-4 py-1.5 rounded-full border border-[#00ff8844] uppercase tracking-wider">Activo Principal</span>
+                <h3 class="text-3xl font-black text-white tracking-tighter uppercase">S&P 500 <span class="text-gray-500">(ES)</span></h3>
+            </div>
+            <div class="space-y-8 mb-10">
+                <div class="grid grid-cols-2 gap-4 border-b border-white/5 pb-6">
+                
+    <div>
+                
+      <p class="text-gray-500 text-[10px] uppercase font-black mb-1 tracking-widest">Retorno Estrategia</p>
+                
+      <p class="text-[#00ff88] text-5xl font-black">+582%</p>
+                
+    </div>
+                
+    <div class="text-right">
+                
+      <p class="text-gray-500 text-[10px] uppercase font-black mb-1 tracking-widest">Max Drawdown</p>
+                
+      <p class="text-white text-3xl font-black">-31%</p>
+                
+    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 border-b border-white/5 pb-6">
+                
+    <div>
+                
+      <p class="text-gray-500 text-[10px] uppercase font-black mb-1 tracking-widest">Buy & Hold (Mercado)</p>
+                
+      <p class="text-gray-300 text-3xl font-black">+270%</p>
+                
+    </div>
+                
+    <div class="text-right">
+                
+      <p class="text-gray-500 text-[10px] uppercase font-black mb-1 tracking-widest">Max DD Mercado</p>
+                
+      <p class="text-red-900 text-3xl font-black">-55%</p>
+                
+    </div>
+                </div>
+            </div>
+            <div class="space-y-3 text-[10px] text-gray-500 font-medium">
+                <p>* Resultados pasados no garantizan futuros.</p>
+ 
+      <p class="text-gray-400 font-bold uppercase">** Estrategia incluye comisiones y slippage. 1% riesgo/operación.</p>
+ 
+  </div>
+ 
+    </div>
+ 
+    <div class="lg:w-3/5 w-full">
+ 
+  <img src="Bactest S&P500.png" alt="Backtest S&P 500" class="rounded-xl border border-white/10 w-full shadow-2xl">
+        </div>
+    </div>
+                </div>
+            </div>
+ 
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-dark p-6 rounded-2xl">
+    <h4 class="font-black uppercase text-xs tracking-widest text-gray-500 mb-4 text-center">Nasdaq 100</h4>
+    <img src="Nasdaq result.png" alt="Nasdaq Result" class="w-full rounded-lg mb-4 opacity-80 border border-white/5">
+    <p class="text-[#00ff88] text-3xl font-black text-center">+689.4%</p>
+                </div>
+                <div class="card-dark p-6 rounded-2xl">
+    <h4 class="font-black uppercase text-xs tracking-widest text-gray-500 mb-4 text-center">DAX 40</h4>
+    <img src="DAX Result.png" alt="DAX Result" class="w-full rounded-lg mb-4 opacity-80 border border-white/5">
+    <p class="text-[#00ff88] text-3xl font-black text-center">+879.1%</p>
+                </div>
+                <div class="card-dark p-6 rounded-2xl">
+    <h4 class="font-black uppercase text-xs tracking-widest text-gray-500 mb-4 text-center">Dow Jones</h4>
+    <img src="Dow Jones Result.png" alt="Dow Jones Result" class="w-full rounded-lg mb-4 opacity-80 border border-white/5">
+    <p class="text-[#00ff88] text-3xl font-black text-center">+692.0%</p>
+                </div>
+ 
+ 
+        </div>
+ 
+ 
+    </div>
+ 
+  </section>
+ 
+  <!-- Monitoreo Estratégico -->
+ 
+  <section id="funciones" class="py-32 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight">Monitoreo <span class="text-[#00ff88]">Estratégico</span></h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card-dark p-8 rounded-3xl text-center">
+                <img src="Smart Box.png" alt="Smart Box" class="feature-img">
+                <h3 class="text-xl font-bold uppercase mb-4">Smart Box Dinámico</h3>
+                <p class="text-gray-400 text-sm">Visualización de zonas de beneficio y stop loss en tiempo real sobre tu gráfico.</p>
+ 
+ 
+        </div>
+            <div class="card-dark p-8 rounded-3xl text-center border-t-2 border-t-[#00ff88]">
+                <img src="Riesgo.png" alt="Riesgo" class="feature-img">
+                <h3 class="text-xl font-bold uppercase mb-4">Gestión de Riesgo</h3>
+ 
+ 
+            <p class="text-gray-400 text-sm">Cálculo automático del tamaño de posición para no arriesgar más de tu plan.</p>
+ 
+ 
+        </div>
+            <div class="card-dark p-8 rounded-3xl text-center">
+                <img src="Alertas.png" alt="Alertas" class="feature-img">
+                <h3 class="text-xl font-bold uppercase mb-4">Alertas Globales</h3>
+                <p class="text-gray-400 text-sm">Notificaciones directas en tu móvil y escritorio para no perder ninguna oportunidad.</p>
+ 
+ 
+        </div>
+ 
+ 
+    </div>
+ 
+  </section>
+ 
+  <!-- Oferta / Precios -->
+ 
+  <section id="precios" class="bg-[#0f0f0f] py-32">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-20 uppercase tracking-tight">Oferta de <span class="text-[#00ff88]">Lanzamiento</span></h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left items-stretch">
+                <!-- Standard -->
+                <div class="card-dark p-10 rounded-[2rem] flex flex-col">
+    <h3 class="text-lg font-bold mb-2 uppercase text-gray-400">Standard Edition</h3>
+    <div class="mb-10">
+        <span class="text-gray-600 line-through text-sm">$100 USD</span>
+        <div class="text-4xl font-black text-white">$49 <span class="text-xs font-normal text-gray-500 uppercase">Único Pago</span></div>
+    </div>
+    <ul class="space-y-5 mb-10 text-xs flex-grow font-bold uppercase tracking-wider">
+        <li><i class="fas fa-check text-[#00ff88] mr-3"></i> Indicador Maestro TradingView</li>
+        <li><i class="fas fa-check text-[#00ff88] mr-3"></i> 3 Entradas (NL1, PD, Swing)</li>
+        <li><i class="fas fa-check text-[#00ff88] mr-3"></i> Alertas Automáticas</li>
+        <li><i class="fas fa-check text-[#00ff88] mr-3"></i> Smart Box Visual</li>
+        <li class="text-gray-600 line-through"><i class="fas fa-times mr-3"></i> Gestión de Riesgo Dinámica</li>
+        <li class="text-gray-600 line-through"><i class="fas fa-times mr-3"></i> App Simulación Portafolio</li>
+    </ul>
+    <a href="#final-cta" class="block text-center border border-gray-700 hover:border-[#00ff88] py-4 rounded-xl font-black uppercase tracking-widest text-[10px] transition mt-auto">ELEGIR STANDARD</a>
+                </div>
+                <!-- Elite -->
+                <div class="card-dark p-10 rounded-[2rem] border-2 border-[#00ff88] relative flex flex-col shadow-[0_0_40px_rgba(0,255,136,0.15)]">
+    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00ff88] text-black text-[9px] font-black px-4 py-1 rounded-full uppercase tracking-tighter">RECOMENDADO</div>
+    <h3 class="text-lg font-bold mb-2 uppercase text-[#00ff88]">Elite Portfolio</h3>
+    <div class="mb-10">
+        <span class="text-gray-600 line-through text-sm">$200 USD</span>
+        <div class="text-4xl font-black text-white">$129 <span class="text-xs font-normal text-gray-500 uppercase">Único Pago</span></div>
+    </div>
+    <ul class="space-y-5 mb-10 text-xs flex-grow font-bold uppercase tracking-wider">
+        <li class="text-white"><i class="fas fa-star text-[#00ff88] mr-3"></i> Todo lo de Standard</li>
+        <li class="text-white"><i class="fas fa-plus text-[#00ff88] mr-3"></i> Position Sizing Automático</li>
+        <li class="text-white"><i class="fas fa-plus text-[#00ff88] mr-3"></i> App Simulación Portafolio</li>
+    </ul>
+    <a href="#final-cta" class="block text-center btn-primary py-4 rounded-xl font-black uppercase tracking-widest text-[10px] mt-auto">ADQUIRIR ELITE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- SECCIÓN: POSITION SIZING AUTOMÁTICO -->
+    <section class="py-24 bg-[#0a0a0a] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="risk-chart-comparison">
+                <div class="mb-10 flex items-center gap-3">
+    <span class="text-gray-500 font-black uppercase text-[10px] tracking-[0.3em]">SOLO DISPONIBLE EN EL PLAN ELITE</span>
+    <span class="bg-[#00ff88] text-black text-[9px] font-black px-3 py-0.5 rounded uppercase">RECOMENDADO</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="order-2 md:order-1 bg-black/40 p-8 rounded-2xl border border-[#00ff8833]">
+        <img src="Calculo de Gestion de Riesgo.png" alt="Cálculo de Gestión de Riesgo" class="risk-image mb-4">
+ 
+                    <p class="text-gray-400 text-[10px] uppercase font-black tracking-widest text-center">Panel de Control de Gestión de Capital</p>
+    </div>
+    <div class="order-1 md:order-2">
+        <h2 class="text-4xl font-black uppercase mb-6 leading-tight">Position <span class="text-[#00ff88]">Sizing</span> Profesional</h2>
+        <p class="text-gray-400 leading-relaxed mb-8">Elimina el error humano en el cálculo del apalancamiento. La tecnología <b>Mano Negra</b> integra un motor de gestión de capital que calcula el tamaño exacto de la posición basándose en la volatilidad y la distancia técnica al Stop Loss en cada activo.</p>
+ 
+                    <div class="grid grid-cols-1 gap-6">
+            <div class="flex items-start gap-4">
+                <div class="bg-[#00ff8822] p-3 rounded-lg"><i class="fas fa-calculator text-[#00ff88]"></i></div>
+                <div>
+                
+    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Cálculo de Contratos / Lotes</h4>
+                
+    <p class="text-gray-500 text-sm">Determina automáticamente cuántos contratos operar según tu porcentaje de riesgo por operación (1%, 0.5%, etc).</p>
+ 
+      </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="bg-[#00ff8822] p-3 rounded-lg"><i class="fas fa-expand-arrows-alt text-[#00ff88]"></i></div>
+                <div>
+                
+    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Stop Loss Dinámico</h4>
+                
+    <p class="text-gray-500 text-sm">El riesgo se ajusta visualmente en el gráfico (Smart Box) permitiendo una ejecución precisa en relación al capital disponible.</p>
+ 
+      </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="bg-[#00ff8822] p-3 rounded-lg"><i class="fas fa-university text-[#00ff88]"></i></div>
+                <div>
+                
+    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Preservación de Capital</h4>
+                
+    <p class="text-gray-400 text-sm italic">"Sin gestión de riesgo, el trading es solo azar". Mantiene tu Drawdown bajo control técnico.</p>
+ 
+      </div>
+ 
+  </div>
+ 
+  </div>
+ 
+  </div>
+    </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- SECCIÓN: COMPARATIVA DE RESULTADOS -->
+ 
+  <section class="py-24 bg-[#0f0f0f] border-y border-white/5">
+ 
+ 
+    <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">La Importancia del <span class="text-[#00ff88]">"Cuánto"</span></h2>
+                <p class="text-gray-400 mt-4 max-w-3xl mx-auto font-medium">Mismas señales, diferente gestión de posición, lleva a resultados radicalmente distintos.</p>
+ 
+ 
+        </div>
+            <div class="bg-black/40 p-4 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+    <div class="space-y-4">
+        <img src="Escenario A Tamano Fijo.png" alt="Escenario A: Tamaño Fijo" class="w-full rounded-2xl border border-white/10 shadow-lg">
+        <div class="card-dark p-6 rounded-2xl border-l-4 border-l-gray-600">
+            <h4 class="text-white font-black uppercase text-xs tracking-widest mb-3">Escenario A: Tamaño Fijo (1 Lote)</h4>
+            <p class="text-[#00ff88] text-4xl font-black mb-2">+202%</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Crecimiento lineal. El capital no se aprovecha eficientemente a medida que la cuenta crece.</p>
+ 
+                    </div>
+    </div>
+    <div class="space-y-4">
+        <img src="Escenario B Fraccion Fija.png" alt="Escenario B: Fracción Fija" class="w-full rounded-2xl border border-[#00ff8822] shadow-lg">
+        <div class="card-dark p-6 rounded-2xl border-l-4 border-l-[#00ff88]">
+            <h4 class="text-[#00ff88] font-black uppercase text-xs tracking-widest mb-3">Escenario B: Fracción Fija (1% Riesgo)</h4>
+            <p class="text-white text-4xl font-black mb-2">+634%</p>
+            <p class="text-gray-400 text-sm leading-relaxed font-bold">Poder del Interés Compuesto. La tecnología Mano Negra escala tu éxito automáticamente.</p>
+ 
+                    </div>
+ 
+ 
+                </div>
+ 
+ 
+            </div>
+ 
+ 
+            <p class="text-center text-gray-500 mt-10 text-[10px] uppercase font-black tracking-[0.2em]">¡EL SECRETO ESTÁ EN LA GESTIÓN DINÁMICA!</p>
+ 
+ 
+        </div>
+ 
+ 
+    </div>
+ 
+  </section>
+ 
+  <!-- SECCIÓN: APP DE SIMULACIÓN DE PORTAFOLIO -->
+ 
+  <section class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="risk-chart-comparison">
+                <div class="mb-10 flex items-center gap-3">
+    <span class="text-gray-500 font-black uppercase text-[10px] tracking-[0.3em]">SOLO DISPONIBLE EN EL PLAN ELITE</span>
+    <span class="bg-[#00ff88] text-black text-[9px] font-black px-3 py-0.5 rounded uppercase">RECOMENDADO</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight text-white mb-16 text-center">APP DE SIMULACIÓN DE PORTAFOLIO</h2>
+                
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+    <div class="space-y-12">
+        <div class="flex items-start gap-5">
+            <div class="bg-[#161616] p-4 rounded-2xl border border-white/5 shadow-xl">
+                <i class="fas fa-shield-alt text-[#00ff88] text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-[#00ff88] text-2xl font-black uppercase tracking-tight mb-3">Ayuda a reducir años negativos</h3>
+                <p class="text-gray-400 leading-relaxed font-medium">Simula combinaciones de 11 activos para diseñar una curva de capital robusta. Encuentra la mejor mezcla que, históricamente, reduce los años negativos de tu operativa.</p>
+ 
+  </div>
+        </div>
+        <div class="flex items-start gap-5">
+            <div class="bg-[#161616] p-4 rounded-2xl border border-white/5 shadow-xl">
+                <i class="fas fa-crosshairs text-[#00ff88] text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-[#00ff88] text-2xl font-black uppercase tracking-tight mb-3">GPS de tu rentabilidad – 100% a tu medida</h3>
+                <p class="text-gray-400 leading-relaxed font-medium">¿Solo puedes operar 2 horas al día? La App ayuda a identificar tus "Horas Doradas": el momento exacto y el activo preciso que maximiza tu rentabilidad en tu ventana de tiempo.</p>
+ 
+  </div>
+        </div>
+        <div class="flex items-start gap-5">
+            <div class="bg-[#161616] p-4 rounded-2xl border border-white/5 shadow-xl">
+                <i class="fas fa-university text-[#00ff88] text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-[#00ff88] text-2xl font-black uppercase tracking-tight mb-3">Nivel Institucional</h3>
+                <p class="text-gray-400 leading-relaxed font-medium">Los profesionales no usan un solo activo; gestionan portafolios. Usa data para calcular sinergias y diversificar como un fondo de inversión profesional.</p>
+ 
+  </div>
+    </div>
+    </div>
+    <div class="relative">
+        <div class="absolute -inset-4 bg-[#00ff88]/5 blur-3xl rounded-full"></div>
+        <div class="relative bg-[#111] p-4 rounded-3xl border border-white/10 shadow-2xl">
+            <img src="Simulacion Portafolio App.png" alt="Simulación Portafolio App" class="w-full rounded-2xl">
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- FAQ -->
+    <section id="faq" class="py-32 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-black text-center mb-16 uppercase tracking-widest text-[#00ff88]">Preguntas Frecuentes</h2>
+        <div class="space-y-4">
+            <details class="card-dark p-6 rounded-2xl cursor-pointer group">
+                <summary class="font-bold uppercase text-xs flex justify-between items-center tracking-wider">
+    1. ¿En qué plataforma está el Indicador?
+ 
+                <i class="fas fa-chevron-down text-[#00ff88] transition-transform group-open:rotate-180"></i>
+                </summary>
+                <div class="mt-4 text-gray-400 text-sm leading-relaxed">
+    Solo en Tradingview por ahora.
+ 
+            </div>
+            </details>
+            <details class="card-dark p-6 rounded-2xl cursor-pointer group">
+                <summary class="font-bold uppercase text-xs flex justify-between items-center tracking-wider">
+    2. ¿Funciona con el plan gratuito de TradingView o necesito un plan pago?
+ 
+                <i class="fas fa-chevron-down text-[#00ff88] transition-transform group-open:rotate-180"></i>
+                </summary>
+                <div class="mt-4 text-gray-400 text-sm leading-relaxed">
+    ¡Sí funciona perfectamente con la cuenta gratuita de TradingView! Hay limitaciones propias de la cuenta free (duración de las alarmas, cantidad de datos en las graficas, etc.).
+ 
+            </div>
+            </details>
+            <details class="card-dark p-6 rounded-2xl cursor-pointer group">
+                <summary class="font-bold uppercase text-xs flex justify-between items-center tracking-wider">
+    3. Si mi bróker no está en TradingView, ¿puedo usar el Indicador?
+ 
+                <i class="fas fa-chevron-down text-[#00ff88] transition-transform group-open:rotate-180"></i>
+                </summary>
+                <div class="mt-4 text-gray-400 text-sm leading-relaxed">
+    ¡Por supuesto! El Indicador es una herramienta visual que te muestra entradas, stops y targets. Tú ves la señal en TradingView y ejecutas manualmente en el bróker que prefieras. Totalmente independiente.
+                </div>
+            </details>
+            <details class="card-dark p-6 rounded-2xl cursor-pointer group">
+                <summary class="font-bold uppercase text-xs flex justify-between items-center tracking-wider">
+    4. ¿Debo pagar data para que el indicador funcione?
+ 
+                <i class="fas fa-chevron-down text-[#00ff88] transition-transform group-open:rotate-180"></i>
+                </summary>
+                <div class="mt-4 text-gray-400 text-sm leading-relaxed">
+    Depende del instrumento: <br>
+ 
+                • En CFDs → datos en vivo gratis en TradingView. <br>
+ 
+                • En acciones o futuros → para datos en tiempo real sin retraso sí necesitas una suscripción de datos.
+ 
+            </div>
+            </details>
+            <details class="card-dark p-6 rounded-2xl cursor-pointer group">
+                <summary class="font-bold uppercase text-xs flex justify-between items-center tracking-wider">
+    5. ¿En qué Instrumento sirve?
+    <i class="fas fa-chevron-down text-[#00ff88] transition-transform group-open:rotate-180"></i>
+                </summary>
+                <div class="mt-4 text-gray-400 text-sm leading-relaxed">
+    Principalmente está diseñado para índices de acciones: S&P500, Nasdaq100, Dow, DAX y Nikkei. Pero funciona en Oro, Petróleo y algunas monedas también.
+ 
+            </div>
+ 
+        </details>
+        </div>
+    </section>
+ 
+    <!-- Página 18 - Cierre -->
+     <section id="final-cta" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+                
+                <!-- BLOQUE IZQUIERDA: Cuadro de Texto -->
+                <div class="lg:w-7/12 w-full">
+                    <div class="cta-box-custom">
+                        <h3 class="text-[#00ff88] text-3xl font-black mb-10 tracking-tight">
+                            Potencia tu Estrategia y Crecimiento HOY
+                        </h3>
+                        
+                        <div class="space-y-8 mb-12">
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#00ff88] text-3xl font-black">1.</span>
+                                <p class="text-white text-xl font-bold">
+                                    Elige tu Nivel <span class="text-gray-500 font-normal">(Standard/Elite).</span>
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#00ff88] text-3xl font-black">2.</span>
+                                <p class="text-white text-xl font-bold">
+                                    Activa tu Indicador <span class="text-gray-500 font-normal">(en TradingView).</span>
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#00ff88] text-3xl font-black">3.</span>
+                                <p class="text-white text-xl font-bold">
+                                    Comienza a Operar <span class="text-gray-500 font-normal">(con riesgo profesional).</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Info de Contacto -->
+                        <div class="pt-8 border-t border-white/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-7 h-7 bg-[#00ff88] rounded-full flex items-center justify-center text-black">
+                                    <i class="fas fa-arrow-right text-[12px]"></i>
+                                </div>
+                                <span class="text-[#00ff88] text-lg font-bold">¡Consigue tu acceso ahora!</span>
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-[#00ff88] text-xl font-bold border-b-2 border-[#00ff88]">Info</span>
+                                <span class="text-[#00ff88] text-xl font-bold">:</span>
+                                <a href="mailto:alfontrading@yahoo.com" class="text-[#00ff88] text-2xl md:text-3xl font-black hover:opacity-80 transition-opacity">
+                                    alfontrading@yahoo.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BLOQUE DERECHA: Círculo -->
+                <div class="lg:w-5/12 w-full flex justify-center lg:justify-end">
+                    <div class="circle-img-container">
+                        <img src="Picture circulo.png" alt="Acción de Trading" 
+                             class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
+                             onerror="this.src='https://via.placeholder.com/500x500/111/00ff88?text=Trading+Image'">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+        </section>
+ 
+    <!-- Footer / Aviso Legal -->
+    <footer class="py-12 border-t border-white/5 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] text-gray-500 leading-relaxed max-w-4xl mx-auto uppercase tracking-wider">
+                Aviso Legal: Invertir en mercados financieros conlleva riesgos significativos. No ponga en juego capital que no pueda permitirse perder. Educación, no Asesoría: Este manual y el indicador son herramientas 100% informativas. No constituyen asesoramiento financiero ni recomendaciones de inversión. Responsabilidad Individual: Usted es el único responsable de sus decisiones de trading. El rendimiento pasado de una estrategia no garantiza resultados futuros. Riesgo de Pérdida: El uso de apalancamiento y productos CFD puede amplificar tanto las ganancias como las pérdidas de capital. Este indicador no garantiza rentabilidad ni elimina el riesgo de pérdida.
+ 
+          </p>
+        </div>
+    </footer>
+ 
 </body>
-
 </html>
+
